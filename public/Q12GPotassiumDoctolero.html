@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2> Q1 2nd Graded Exercise submitted by Potassium</h2>
+
+    <head>
+        <style>
+          body {
+            background-color: rgb(160, 221, 203);
+            font-size: 12px;
+            color: rgb(52, 127, 145);
+            font-family: Arial, Helvetica, sans-serif;
+          }
+        </style>
+      </head>
+     
+        <div>Meal Price?
+        <input id = "inp_mp">
+        <div>Tip?
+        <input id = "inp_tip">
+        <div> Service Charge? (don't include the % sign)
+        <input id = "inp_sc">
+        <br />
+        <button id = "btn_submit">Submit</button>
+        <p id="result">Total Meal: </p>
+
+    <script type="text/javascript">
+        const btn = document.getElementById("btn_submit");
+        const mealPrice = document.getElementById("inp_mp");
+
+        btn.addEventListener('click', totalMeal);
+        function totalMeal() {
+            var mp = Number(document.getElementById("inp_mp").value);
+            var tip = Number(document.getElementById("inp_tip").value);
+            var sc = Number(document.getElementById("inp_sc").value);
+    
+          
+        totalCost = mp + tip + (sc / 100 * mp);
+         document.getElementById("result").innerHTML = "Total Meal: " + totalCost.toFixed(2);
+        }
+    </script>
+
+</body>
+</html>
